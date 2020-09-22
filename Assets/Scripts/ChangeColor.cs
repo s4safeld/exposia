@@ -8,28 +8,28 @@ using UnityEngine.Tilemaps;
 using UnityEngine.Windows;
 
 public class ChangeColor : MonoBehaviour {
-    private Camera cam;
-    public int color;
-    public SpriteRenderer background;
-    
-    // Start is called before the first frame update
-    void Start() {
-        cam = GetComponent<Camera>();
+    public bool bright;
+    private LightSwitchManager lsm;
+
+    private void Start() {
+        lsm = FindObjectOfType<LightSwitchManager>();
     }
 
-    // Update is called once per frame
-    void Update() {
-        
+    private void Update() {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        foreach (RaycastHit hit in Physics.RaycastAll(ray)) {
+            if (hit.collider == gameObject.GetComponent<Collider>()) {
+                Debug.Log(name + "mouse entered");
+                if (lsm.bright != bright) {
+                    //lsm.bright = bright;
+                    lsm.switchLight = true;
+                }
+            }
+        }
     }
 
-    void OnMouseDown() {
-        if (color == 0) {
-            background.color = Color.black;
-        }
-        else {
-            background.color = Color.white;
-        }
-
-        Information.Color = color;
+    private void OnMouseDown() {
+        Debug.Log("FUCK!");
+        lsm.switchLight = true;
     }
 }

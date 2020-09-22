@@ -6,6 +6,17 @@
     <e p="F:\UnityProjets\Exposia\Exposia" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Free Asset - 2D Handcrafted Art" t="Include">
+          <e p="Readme.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="CamerController.cs" t="Include" />
+          </e>
+          <e p="Shader" t="Include">
+            <e p="NormalMappedSprite-Animated.shader" t="Include" />
+            <e p="NormalMappedTileAnimated.shader" t="Include" />
+          </e>
+        </e>
+        <e p="LightSwitchManager.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ChangeColor.cs" t="Include" />
           <e p="Information.cs" t="Include" />
