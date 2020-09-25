@@ -17,6 +17,8 @@
           </e>
         </e>
         <e p="LightSwitchManager.cs" t="Include" />
+        <e p="MouseMovement.cs" t="Include" />
+        <e p="PlayerMovement.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="ChangeColor.cs" t="Include" />
           <e p="Information.cs" t="Include" />
